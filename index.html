@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Как у нас украли кафе в Нячанге</title>
+<title data-i18n="title">Как у нас украли кафе в Нячанге</title>
 
 <style>
 
@@ -27,6 +27,23 @@ background:#111;
 color:white;
 padding:60px 20px;
 text-align:center;
+position: relative;
+}
+
+.lang-switcher {
+position: absolute;
+top: 20px;
+right: 20px;
+}
+
+.lang-switcher select {
+padding: 8px 12px;
+border-radius: 6px;
+border: 1px solid #ccc;
+background: white;
+font-size: 14px;
+cursor: pointer;
+outline: none;
 }
 
 .hero h1{
@@ -201,6 +218,11 @@ flex-direction:column;
 text-align:center;
 }
 
+.lang-switcher {
+top: 10px;
+right: 10px;
+}
+
 }
 
 </style>
@@ -209,9 +231,17 @@ text-align:center;
 <body>
 
 <div class="hero">
-<h1>Как у нас украли кафе в Нячанге</h1>
+<div class="lang-switcher">
+<select id="langSelect" onchange="changeLang(this.value)">
+<option value="ru">Русский</option>
+<option value="en">English</option>
+<option value="vi">Tiếng Việt</option>
+</select>
+</div>
 
-<p>
+<h1 data-i18n="hero_h1">Как у нас украли кафе в Нячанге</h1>
+
+<p data-i18n="hero_p">
 8 февраля 2026 года мы купили кафе в Нячанге.  
 Через несколько недель один из партнеров заявил, что мы «гости» —  
 и забрал бизнес себе.
@@ -226,18 +256,18 @@ text-align:center;
 <div class="facts">
 
 <div class="fact">
-<strong>340 000 000 VND</strong>
-стоимость кафе
+<strong data-i18n="fact_price">340 000 000 VND</strong>
+<span data-i18n="fact_price_desc">стоимость кафе</span>
 </div>
 
 <div class="fact">
-<strong>3 партнера</strong>
-вложили деньги
+<strong data-i18n="fact_partners">3 партнера</strong>
+<span data-i18n="fact_partners_desc">вложили деньги</span>
 </div>
 
 <div class="fact">
-<strong>1 человек</strong>
-забрал бизнес
+<strong data-i18n="fact_scammer">1 человек</strong>
+<span data-i18n="fact_scammer_desc">забрал бизнес</span>
 </div>
 
 </div>
@@ -248,7 +278,7 @@ text-align:center;
 
 <div class="section">
 
-<h2>Кто это сделал</h2>
+<h2 data-i18n="who_title">Кто это сделал</h2>
 
 <div class="person">
 
@@ -256,23 +286,21 @@ text-align:center;
 
 <div>
 
-<p><strong>Олег Богдан (Aleh Bohdan)</strong></p>
+<p><strong data-i18n="person_name">Олег Богдан (Aleh Bohdan)</strong></p>
+
+<p data-i18n="person_citizenship">Гражданин Республики Беларусь</p>
 
 <p>
-Гражданин Республики Беларусь
+<span data-i18n="person_phone">Телефон:</span> <strong>+375 29 658 9947</strong> (Telegram / Zalo)
 </p>
 
 <p>
-Телефон: <strong>+375 29 658 9947</strong> (Telegram / Zalo)
-</p>
-
-<p>
-Директор компании: 
+<span data-i18n="person_company">Директор компании:</span> 
 <strong>CÔNG TY TNHH BELKA NT</strong>
 </p>
 
 <p>
-<em>Данного товарища можно встретить лично по адресу кафе ниже.</em>
+<em data-i18n="person_meet">Данного товарища можно встретить лично по адресу кафе ниже.</em>
 </p>
 
 </div>
@@ -285,19 +313,19 @@ text-align:center;
 
 <div class="section">
 
-<h2>О каком кафе идет речь</h2>
+<h2 data-i18n="cafe_title">О каком кафе идет речь</h2>
 
 <p>
-Кафе <strong>Frau Waffel</strong> в Нячанге.
+<span data-i18n="cafe_name_desc">Кафе</span> <strong>Frau Waffel</strong> <span data-i18n="cafe_location">в Нячанге</span>.
 </p>
 
 <div class="location-box">
-<strong>Адрес:</strong> <a href="https://maps.app.goo.gl/wEeCgrbshTa6hxHM7" target="_blank">Перейти на Google Maps</a>
+<strong data-i18n="cafe_address">Адрес:</strong> <a href="https://maps.app.goo.gl/wEeCgrbshTa6hxHM7" target="_blank" data-i18n="cafe_maps">Перейти на Google Maps</a>
 </div>
 
 <div class="images">
-<img src="materials/cafe1.png" alt="Frau Waffel Фото 1">
-<img src="materials/cafe2.png" alt="Frau Waffel Фото 2">
+<img src="materials/cafe1.png" alt="Frau Waffel 1">
+<img src="materials/cafe2.png" alt="Frau Waffel 2">
 </div>
 
 </div>
@@ -306,30 +334,19 @@ text-align:center;
 
 <div class="section">
 
-<h2>Как это произошло</h2>
+<h2 data-i18n="how_title">Как это произошло</h2>
 
-<p>
-В январе 2026 года мы договорились открыть кафе в Нячанге.
-</p>
+<p data-i18n="how_p1">В январе 2026 года мы договорились открыть кафе в Нячанге.</p>
 
-<p>
-Мы нашли объявление о продаже действующего кафе  
-<strong>Frau Waffel</strong> и приняли решение купить его вместе.
-</p>
+<p data-i18n="how_p2">Мы нашли объявление о продаже действующего кафе <strong>Frau Waffel</strong> и приняли решение купить его вместе.</p>
 
-<p>
-8 февраля 2026 года кафе было куплено за  
-<strong>340 000 000 VND</strong>.
-</p>
+<p data-i18n="how_p3">8 февраля 2026 года кафе было куплено за <strong>340 000 000 VND</strong>.</p>
 
-<p>
-Деньги предыдущим владельцам передавались лично в помещении кафе.  
-Передача денег и подписание документов были зафиксированы камерами наблюдения.
-</p>
+<p data-i18n="how_p4">Деньги предыдущим владельцам передавались лично в помещении кафе. Передача денег и подписание документов были зафиксированы камерами наблюдения.</p>
 
 <div class="images">
-<img src="materials/money_for_cafe.png" alt="Передача денег">
-<img src="materials/contract_signed.png" alt="Подписание контракта">
+<img src="materials/money_for_cafe.png" alt="Money">
+<img src="materials/contract_signed.png" alt="Contract">
 </div>
 
 </div>
@@ -338,29 +355,21 @@ text-align:center;
 
 <div class="section">
 
-<h2>Почему бизнес был оформлен на его компанию</h2>
+<h2 data-i18n="why_title">Почему бизнес был оформлен на его компанию</h2>
+
+<p data-i18n="why_p1">По предложению Олега Богдана документы и договор аренды были оформлены на его компанию.</p>
+
+<p data-i18n="why_p2">Мы согласились на это потому что:</p>
 
 <p>
-По предложению Олега Богдана документы и договор аренды были оформлены на его компанию.
-</p>
-
-<p>
-Мы согласились на это потому что:
-</p>
-
-<p>
-— перед праздником ТЕТ практически невозможно быстро открыть новую компанию во Вьетнаме  
+<span data-i18n="why_reason1">— перед праздником ТЕТ практически невозможно быстро открыть новую компанию во Вьетнаме</span>
 <br>
-— у него уже была зарегистрированная компания
+<span data-i18n="why_reason2">— у него уже была зарегистрированная компания</span>
 </p>
 
-<p>
-Мы договорились использовать эту компанию временно и после ТЕТа оформить совместное владение.
-</p>
+<p data-i18n="why_p3">Мы договорились использовать эту компанию временно и после ТЕТа оформить совместное владение.</p>
 
-<p>
-Это решение было принято исключительно на основании доверия.
-</p>
+<p data-i18n="why_p4">Это решение было принято исключительно на основании доверия.</p>
 
 </div>
 
@@ -368,25 +377,19 @@ text-align:center;
 
 <div class="section">
 
-<h2>Что произошло дальше</h2>
+<h2 data-i18n="next_title">Что произошло дальше</h2>
+
+<p data-i18n="next_p1">После покупки кафе мы начали работать и управлять им вместе.</p>
+
+<p data-i18n="next_p2">Однако через несколько недель Олег Богдан заявил, что:</p>
 
 <p>
-После покупки кафе мы начали работать и управлять им вместе.
-</p>
-
-<p>
-Однако через несколько недель Олег Богдан заявил, что:
-</p>
-
-<p>
-— мы не имеем никаких прав на бизнес  
+<span data-i18n="next_point1">— мы не имеем никаких прав на бизнес</span>
 <br>
-— мы всего лишь «гости»
+<span data-i18n="next_point2">— мы всего лишь «гости»</span>
 </p>
 
-<p>
-После этого он сменил пароли доступа и полностью забрал контроль над кафе.
-</p>
+<p data-i18n="next_p3">После этого он сменил пароли доступа и полностью забрал контроль над кафе.</p>
 
 </div>
 
@@ -394,60 +397,38 @@ text-align:center;
 
 <div class="section">
 
-<h2>Доказательства</h2>
+<h2 data-i18n="proof_title">Доказательства</h2>
+
+<p data-i18n="proof_intro">У нас имеются свидетели и подтверждающие материалы:</p>
 
 <p>
-У нас имеются свидетели и подтверждающие материалы:
-</p>
-
-<p>
-— видеозапись передачи денег  
+<span data-i18n="proof_item1">— видеозапись передачи денег</span>
 <br>
-— видеозапись подписания договора  
+<span data-i18n="proof_item2">— видеозапись подписания договора</span>
 <br>
-— полная выгрузка переписки  
+<span data-i18n="proof_item3">— полная выгрузка переписки</span>
 <br>
-— электронные документы учета прихода и расхода денег, а также чеки ежедневных закрытий смен.
+<span data-i18n="proof_item4">— электронные документы учета прихода и расхода денег, а также чеки ежедневных закрытий смен.</span>
 </p>
 
 
 <div class="images">
-
-<img src="materials/screenshot_1.png" alt="Скриншот 1">
-<img src="materials/screenshot_2.png" alt="Скриншот 2">
-<img src="materials/screenshot_3.png" alt="Скриншот 3">
-<img src="materials/rabotaem_v_kafe.png" alt="Скриншот 4">
-
+<img src="materials/screenshot_1.png" alt="1">
+<img src="materials/screenshot_2.png" alt="2">
+<img src="materials/screenshot_3.png" alt="3">
+<img src="materials/rabotaem_v_kafe.png" alt="4">
 </div>
 
-<p>
+<p data-i18n="proof_deleted_text">
 На фото ниже — снимок экрана с обсуждением разделения суммы покупки кафе поровну (по 113.3 млн VND на каждого). 
 <strong>Важно:</strong> в официальной выгрузке переписки этих сообщений нет, так как Олег Богдан предусмотрительно удалил их, что доказывает его изначальный злой умысел.
 </p>
 
 <div class="images" style="grid-template-columns: 1fr; max-width: 500px; margin: 20px auto;">
-<img src="materials/shares.jpg" alt="Удаленные сообщения о долях">
+<img src="materials/shares.jpg" alt="Shares">
 </div>
 
-<p>
-Полная видеозапись передачи денег может быть предоставлена по запросу.
-</p>
-
-</div>
-
-
-
-<div class="section">
-
-<h2>Юридические действия</h2>
-
-<p>
-По данному факту было подано заявление в полицию. Однако они сочли имеющиеся доказательства недостаточными для открытия уголовного дела.
-</p>
-
-<p>
-Поэтому вся наша надежда — на сообщество живущих тут людей в плане распространения информации о недобросовестном человеке и недопущении его обогащения таким преступным путем.
-</p>
+<p data-i18n="proof_video">Полная видеозапись передачи денег может быть предоставлена по запросу.</p>
 
 </div>
 
@@ -455,20 +436,30 @@ text-align:center;
 
 <div class="section">
 
-<h2>Связаться с нами</h2>
+<h2 data-i18n="legal_title">Юридические действия</h2>
 
-<p>
-Все подробности инцидента, а также возможность связаться с нами — в наших Instagram-аккаунтах:
-</p>
+<p data-i18n="legal_p1">По данному факту было подано заявление в полицию. Однако они сочли имеющиеся доказательства недостаточными для открытия уголовного дела.</p>
+
+<p data-i18n="legal_p2">Поэтому вся наша надежда — на сообщество живущих тут людей в плане распространения информации о недобросовестном человеке и недопущении его обогащения таким преступным путем.</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2 data-i18n="contact_title">Связаться с нами</h2>
+
+<p data-i18n="contact_p">Все подробности инцидента, а также возможность связаться с нами — в наших Instagram-аккаунтах:</p>
 
 <div class="social-links">
 <a href="https://www.instagram.com/ed_volkov" target="_blank" class="social-item">
 <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-<span>Эдуард Волков</span>
+<span data-i18n="eduard_name">Эдуард Волков</span>
 </a>
 <a href="https://www.instagram.com/travelophilea" target="_blank" class="social-item">
 <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-<span>Александра</span>
+<span data-i18n="alexandra_name">Александра</span>
 </a>
 </div>
 
@@ -478,16 +469,13 @@ text-align:center;
 
 <div class="share">
 
-<h2>Поделитесь этой историей</h2>
+<h2 data-i18n="share_title">Поделитесь этой историей</h2>
 
-<p>
-Чем больше людей узнают об этой ситуации, тем меньше вероятность,
-что подобное повторится с другими.
-</p>
+<p data-i18n="share_desc">Чем больше людей узнают об этой ситуации, тем меньше вероятность, что подобное повторится с другими.</p>
 
 <a href="#" onclick="shareTwitter()" class="tw">Twitter</a>
 <a href="#" onclick="shareFacebook()" class="fb">Facebook</a>
-<a href="#" onclick="shareVK()" class="vk">ВКонтакте</a>
+<a href="#" onclick="shareVK()" class="vk" data-i18n="vk_btn">ВКонтакте</a>
 
 </div>
 
@@ -495,16 +483,223 @@ text-align:center;
 
 
 <div class="footer">
-
-Нячанг, Вьетнам  
-2026
-
+<span data-i18n="footer_location">Нячанг, Вьетнам</span><br>2026
 </div>
 
 <script>
+const translations = {
+  ru: {
+    title: "Как у нас украли кафе в Нячанге",
+    hero_h1: "Как у нас украли кафе в Нячанге",
+    hero_p: "8 февраля 2026 года мы купили кафе в Нячанге. Через несколько недель один из партнеров заявил, что мы «гости» — и забрал бизнес себе.",
+    fact_price: "340 000 000 VND",
+    fact_price_desc: "стоимость кафе",
+    fact_partners: "3 партнера",
+    fact_partners_desc: "вложили деньги",
+    fact_scammer: "1 человек",
+    fact_scammer_desc: "забрал бизнес",
+    who_title: "Кто это сделал",
+    person_name: "Олег Богдан (Aleh Bohdan)",
+    person_citizenship: "Гражданин Республики Беларусь",
+    person_phone: "Телефон:",
+    person_company: "Директор компании:",
+    person_meet: "Данного товарища можно встретить лично по адресу кафе ниже.",
+    cafe_title: "О каком кафе идет речь",
+    cafe_name_desc: "Кафе",
+    cafe_location: "в Нячанге",
+    cafe_address: "Адрес:",
+    cafe_maps: "Перейти на Google Maps",
+    how_title: "Как это произошло",
+    how_p1: "В январе 2026 года мы договорились открыть кафе в Нячанге.",
+    how_p2: "Мы нашли объявление о продаже действующего кафе Frau Waffel и приняли решение купить его вместе.",
+    how_p3: "8 февраля 2026 года кафе было куплено за 340 000 000 VND.",
+    how_p4: "Деньги предыдущим владельцам передавались лично в помещении кафе. Передача денег и подписание документов были зафиксированы камерами наблюдения.",
+    why_title: "Почему бизнес был оформлен на его компанию",
+    why_p1: "По предложению Олега Богдана документы и договор аренды были оформлены на его компанию.",
+    why_p2: "Мы согласились на это потому что:",
+    why_reason1: "— перед праздником ТЕТ практически невозможно быстро открыть новую компанию во Вьетнаме",
+    why_reason2: "— у него уже была зарегистрированная компания",
+    why_p3: "Мы договорились использовать эту компанию временно и после ТЕТа оформить совместное владение.",
+    why_p4: "Это решение было принято исключительно на основании доверия.",
+    next_title: "Что произошло дальше",
+    next_p1: "После покупки кафе мы начали работать и управлять им вместе.",
+    next_p2: "Однако через несколько недель Олег Богдан заявил, что:",
+    next_point1: "— мы не имеем никаких прав на бизнес",
+    next_point2: "— мы всего лишь «гости»",
+    next_p3: "После этого он сменил пароли доступа и полностью забрал контроль над кафе.",
+    proof_title: "Доказательства",
+    proof_intro: "У нас имеются свидетели и подтверждающие материалы:",
+    proof_item1: "— видеозапись передачи денег",
+    proof_item2: "— видеозапись подписания договора",
+    proof_item3: "— полная выгрузка переписки",
+    proof_item4: "— электронные документы учета прихода и расхода денег, а также чеки ежедневных закрытий смен.",
+    proof_deleted_text: "На фото ниже — снимок экрана с обсуждением разделения суммы покупки кафе поровну (по 113.3 млн VND на каждого). Важно: в официальной выгрузке переписки этих сообщений нет, так как Олег Богдан предусмотрительно удалил их, что доказывает его изначальный злой умысел.",
+    proof_video: "Полная видеозапись передачи денег может быть предоставлена по запросу.",
+    legal_title: "Юридические действия",
+    legal_p1: "По данному факту было подано заявление в полицию. Однако они сочли имеющиеся доказательства недостаточными для открытия уголовного дела.",
+    legal_p2: "Поэтому вся наша надежда — на сообщество живущих тут людей в плане распространения информации о недобросовестном человеке и недопущении его обогащения таким преступным путем.",
+    contact_title: "Связаться с нами",
+    contact_p: "Все подробности инцидента, а также возможность связаться с нами — в наших Instagram-аккаунтах:",
+    eduard_name: "Эдуард Волков",
+    alexandra_name: "Александра",
+    share_title: "Поделитесь этой историей",
+    share_desc: "Чем больше людей узнают об этой ситуации, тем меньше вероятность, что подобное повторится с другими.",
+    vk_btn: "ВКонтакте",
+    footer_location: "Нячанг, Вьетнам"
+  },
+  en: {
+    title: "How our cafe was stolen in Nha Trang",
+    hero_h1: "How our cafe was stolen in Nha Trang",
+    hero_p: "On February 8, 2026, we bought a cafe in Nha Trang. A few weeks later, one of the partners claimed we were 'guests' and took the business for himself.",
+    fact_price: "340,000,000 VND",
+    fact_price_desc: "cafe cost",
+    fact_partners: "3 partners",
+    fact_partners_desc: "invested money",
+    fact_scammer: "1 person",
+    fact_scammer_desc: "took the business",
+    who_title: "Who did it",
+    person_name: "Oleg Bogdan (Aleh Bohdan)",
+    person_citizenship: "Citizen of the Republic of Belarus",
+    person_phone: "Phone:",
+    person_company: "Company Director:",
+    person_meet: "This person can be found personally at the cafe address below.",
+    cafe_title: "Which cafe is it",
+    cafe_name_desc: "Cafe",
+    cafe_location: "in Nha Trang",
+    cafe_address: "Address:",
+    cafe_maps: "Go to Google Maps",
+    how_title: "How it happened",
+    how_p1: "In January 2026, we agreed to open a cafe in Nha Trang.",
+    how_p2: "We found an ad for the sale of an existing cafe Frau Waffel and decided to buy it together.",
+    how_p3: "On February 8, 2026, the cafe was bought for 340,000,000 VND.",
+    how_p4: "The money was handed to the previous owners personally in the cafe. The money transfer and document signing were recorded by security cameras.",
+    why_title: "Why the business was registered to his company",
+    why_p1: "At Oleg Bogdan's suggestion, the documents and lease agreement were registered to his company.",
+    why_p2: "We agreed to this because:",
+    why_reason1: "— before the TET holiday, it is practically impossible to quickly open a new company in Vietnam",
+    why_reason2: "— he already had a registered company",
+    why_p3: "We agreed to use this company temporarily and arrange joint ownership after TET.",
+    why_p4: "This decision was made solely based on trust.",
+    next_title: "What happened next",
+    next_p1: "After buying the cafe, we started working and managing it together.",
+    next_p2: "However, a few weeks later, Oleg Bogdan stated that:",
+    next_point1: "— we have no rights to the business",
+    next_point2: "— we are just 'guests'",
+    next_p3: "After that, he changed the access passwords and took full control of the cafe.",
+    proof_title: "Evidence",
+    proof_intro: "We have witnesses and supporting materials:",
+    proof_item1: "— video recording of the money transfer",
+    proof_item2: "— video recording of the contract signing",
+    proof_item3: "— full message history logs",
+    proof_item4: "— digital accounting documents and daily closing reports.",
+    proof_deleted_text: "The photo below is a screenshot showing the discussion of splitting the cafe purchase price equally (113.3 million VND each). Important: these messages are missing from the official logs as Oleg Bogdan prudently deleted them, proving initial malicious intent.",
+    proof_video: "The full video recording of the money transfer can be provided upon request.",
+    legal_title: "Legal actions",
+    legal_p1: "A police report was filed. However, they deemed the available evidence insufficient to open a criminal case.",
+    legal_p2: "Therefore, our only hope is the community of people living here to spread information about this dishonest person and prevent him from profiting through such criminal ways.",
+    contact_title: "Contact us",
+    contact_p: "Full details of the incident and the opportunity to contact us are on our Instagram accounts:",
+    eduard_name: "Eduard Volkov",
+    alexandra_name: "Alexandra",
+    share_title: "Share this story",
+    share_desc: "The more people know about this situation, the less likely it is to happen to others.",
+    vk_btn: "VKontakte",
+    footer_location: "Nha Trang, Vietnam"
+  },
+  vi: {
+    title: "Quán cà phê của chúng tôi bị đánh cắp ở Nha Trang như thế nào",
+    hero_h1: "Quán cà phê của chúng tôi bị đánh cắp ở Nha Trang như thế nào",
+    hero_p: "Vào ngày 8 tháng 2 năm 2026, chúng tôi đã mua một quán cà phê ở Nha Trang. Vài tuần sau, một trong những đối tác tuyên bố chúng tôi là 'khách' và tự mình chiếm đoạt công việc kinh doanh.",
+    fact_price: "340.000.000 VND",
+    fact_price_desc: "chi phí quán cà phê",
+    fact_partners: "3 đối tác",
+    fact_partners_desc: "đã đầu tư tiền",
+    fact_scammer: "1 người",
+    fact_scammer_desc: "đã chiếm đoạt",
+    who_title: "Ai đã làm việc đó",
+    person_name: "Oleg Bogdan (Aleh Bohdan)",
+    person_citizenship: "Công dân Cộng hòa Belarus",
+    person_phone: "Điện thoại:",
+    person_company: "Giám đốc công ty:",
+    person_meet: "Người này có thể được tìm thấy trực tiếp tại địa chỉ quán cà phê bên dưới.",
+    cafe_title: "Đó là quán cà phê nào",
+    cafe_name_desc: "Quán cà phê",
+    cafe_location: "tại Nha Trang",
+    cafe_address: "Địa chỉ:",
+    cafe_maps: "Chuyển đến Google Maps",
+    how_title: "Chuyện đã xảy ra như thế nào",
+    how_p1: "Vào tháng 1 năm 2026, chúng tôi đã đồng ý mở một quán cà phê ở Nha Trang.",
+    how_p2: "Chúng tôi tìm thấy một mẩu quảng cáo bán quán cà phê Frau Waffel đang hoạt động và quyết định cùng nhau mua nó.",
+    how_p3: "Vào ngày 8 tháng 2 năm 2026, quán cà phê được mua với giá 340.000.000 VND.",
+    how_p4: "Tiền được giao tận tay cho chủ cũ tại quán. Việc giao tiền và ký kết giấy tờ đã được camera an ninh ghi lại.",
+    why_title: "Tại sao doanh nghiệp được đăng ký dưới tên công ty của anh ta",
+    why_p1: "Theo gợi ý của Oleg Bogdan, các giấy tờ và hợp đồng thuê đã được đăng ký dưới tên công ty của anh ta.",
+    why_p2: "Chúng tôi đồng ý việc này vì:",
+    why_reason1: "— trước kỳ nghỉ Tết, gần như không thể nhanh chóng mở công ty mới tại Việt Nam",
+    why_reason2: "— anh ta đã có sẵn một công ty đã đăng ký",
+    why_p3: "Chúng tôi đồng ý sử dụng công ty này tạm thời và sẽ sắp xếp sở hữu chung sau Tết.",
+    why_p4: "Quyết định này được đưa ra hoàn toàn dựa trên sự tin tưởng.",
+    next_title: "Chuyện gì xảy ra tiếp theo",
+    next_p1: "Sau khi mua quán, chúng tôi bắt đầu cùng nhau làm việc và quản lý quán.",
+    next_p2: "Tuy nhiên, vài tuần sau, Oleg Bogdan tuyên bố rằng:",
+    next_point1: "— chúng tôi không có quyền gì đối với công việc kinh doanh",
+    next_point2: "— chúng tôi chỉ là 'khách'",
+    next_p3: "Sau đó, anh ta đã thay đổi mật khẩu truy cập và giành toàn quyền kiểm soát quán cà phê.",
+    proof_title: "Bằng chứng",
+    proof_intro: "Chúng tôi có nhân chứng và các tài liệu hỗ trợ:",
+    proof_item1: "— video ghi lại việc giao tiền",
+    proof_item2: "— video ghi lại việc ký hợp đồng",
+    proof_item3: "— toàn bộ lịch sử tin nhắn",
+    proof_item4: "— các chứng từ kế toán điện tử và báo cáo chốt ca hàng ngày.",
+    proof_deleted_text: "Ảnh bên dưới là ảnh chụp màn hình cuộc thảo luận về việc chia đều số tiền mua quán (mỗi người 113,3 triệu VND). Quan trọng: những tin nhắn này thiếu trong lịch sử chính thức vì Oleg Bogdan đã chủ động xóa chúng, chứng tỏ ý đồ xấu ngay từ đầu.",
+    proof_video: "Video ghi lại đầy đủ việc giao tiền có thể được cung cấp theo yêu cầu.",
+    legal_title: "Hành động pháp lý",
+    legal_p1: "Một bản báo cáo cảnh sát đã được nộp. Tuy nhiên, họ cho rằng các bằng chứng hiện có không đủ để mở một vụ án hình sự.",
+    legal_p2: "Vì vậy, hy vọng duy nhất của chúng tôi là cộng đồng những người đang sinh sống tại đây sẽ lan tỏa thông tin về con người không trung thực này và ngăn chặn anh ta trục lợi bằng những con đường bất chính như vậy.",
+    contact_title: "Liên hệ với chúng tôi",
+    contact_p: "Toàn bộ chi tiết về vụ việc và cơ hội liên hệ trực tiếp với chúng tôi có trên tài khoản Instagram của chúng tôi:",
+    eduard_name: "Eduard Volkov",
+    alexandra_name: "Alexandra",
+    share_title: "Chia sẻ câu chuyện này",
+    share_desc: "Càng nhiều người biết về tình huống này, khả năng nó lặp lại với những người khác càng ít đi.",
+    vk_btn: "VKontakte",
+    footer_location: "Nha Trang, Việt Nam"
+  }
+};
+
+function changeLang(lang) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang][key]) {
+      if (el.tagName === 'TITLE') {
+        document.title = translations[lang][key];
+      } else {
+        el.innerHTML = translations[lang][key];
+      }
+    }
+  });
+  document.documentElement.lang = lang;
+  localStorage.setItem('preferredLang', lang);
+  document.getElementById('langSelect').value = lang;
+}
+
+// Auto-detection
+window.onload = () => {
+  let lang = localStorage.getItem('preferredLang');
+  if (!lang) {
+    const browserLang = navigator.language.slice(0, 2);
+    if (translations[browserLang]) {
+      lang = browserLang;
+    } else {
+      lang = 'ru';
+    }
+  }
+  changeLang(lang);
+};
+
 function shareTwitter() {
   const url = encodeURIComponent(window.location.href);
-  const text = encodeURIComponent("Как у нас украли кафе в Нячанге. История мошенничества.");
+  const text = encodeURIComponent(document.title + ". Story of a fraud.");
   window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
 }
 function shareFacebook() {
@@ -513,7 +708,7 @@ function shareFacebook() {
 }
 function shareVK() {
   const url = encodeURIComponent(window.location.href);
-  const title = encodeURIComponent("Как у нас украли кафе в Нячанге");
+  const title = encodeURIComponent(document.title);
   window.open(`https://vk.com/share.php?url=${url}&title=${title}`, '_blank');
 }
 </script>
