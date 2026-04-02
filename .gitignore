@@ -1,0 +1,8 @@
+deploy.sh
+deploy.bat
+remote_deploy.py
+*.log
+.env
+.DS_Store
+node_modules/
+dist/
