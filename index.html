@@ -131,6 +131,50 @@ display:block;
 margin-bottom:8px;
 }
 
+.update-box {
+background: #fff0f0;
+border: 2px solid #ff4d4d;
+padding: 25px;
+border-radius: 12px;
+margin-bottom: 30px;
+display: flex;
+flex-direction: column;
+gap: 15px;
+box-shadow: 0 4px 12px rgba(255, 77, 77, 0.1);
+}
+
+.update-header {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.update-badge {
+background: #ff4d4d;
+color: white;
+padding: 4px 10px;
+border-radius: 4px;
+font-weight: bold;
+font-size: 12px;
+text-transform: uppercase;
+}
+
+.update-box h3 {
+margin: 0;
+font-size: 20px;
+}
+
+.update-box p {
+margin: 0;
+font-size: 16px;
+}
+
+.update-link {
+color: #ff4d4d;
+font-weight: bold;
+text-decoration: underline;
+}
+
 .person{
 display:flex;
 flex-wrap:wrap;
@@ -284,6 +328,18 @@ right: 10px;
 <div class="container">
 
 <div class="section">
+
+    <div class="update-box">
+        <div class="update-header">
+            <span class="update-badge" data-i18n="update_badge">Обновление</span>
+            <h3 data-i18n="update_title">Досудебное уведомление</h3>
+        </div>
+        <p>
+            <span data-i18n="update_desc">31 марта 2026 года нашими юристами было направлено официальное досудебное требование Олегу Богдану.</span>
+            <br><br>
+            <a href="legal-update.html" class="update-link" data-i18n="update_link">Читать подробности и смотреть документ</a>
+        </p>
+    </div>
 
 <div class="facts">
 
@@ -531,6 +587,10 @@ const translations = {
     fact_partners_desc: "вложили деньги",
     fact_scammer: "1 человек",
     fact_scammer_desc: "забрал бизнес",
+    update_badge: "Обновление",
+    update_title: "Досудебное уведомление",
+    update_desc: "31 марта 2026 года нашими юристами было направлено официальное досудебное требование Олегу Богдану.",
+    update_link: "Читать подробности и смотреть документ",
     who_title: "Кто это сделал",
     person_name: "Олег Богдан (Aleh Bohdan)",
     person_citizenship: "Гражданин Республики Беларусь",
@@ -591,6 +651,10 @@ const translations = {
     fact_partners_desc: "invested money",
     fact_scammer: "1 person",
     fact_scammer_desc: "took the business",
+    update_badge: "Update",
+    update_title: "Pre-court Notice",
+    update_desc: "On March 31, 2026, our lawyers sent an official pre-court notice to Oleg Bogdan.",
+    update_link: "Read details and view document",
     who_title: "Who did it",
     person_name: "Oleg Bogdan (Aleh Bohdan)",
     person_citizenship: "Citizen of the Republic of Belarus",
@@ -651,6 +715,10 @@ const translations = {
     fact_partners_desc: "đã đầu tư tiền",
     fact_scammer: "1 người",
     fact_scammer_desc: "đã chiếm đoạt",
+    update_badge: "Cập nhật",
+    update_title: "Thông báo trước khi kiện",
+    update_desc: "Vào ngày 31 tháng 3 năm 2026, luật sư của chúng tôi đã gửi thông báo chính thức trước khi kiện cho Oleg Bogdan.",
+    update_link: "Đọc chi tiết và xem tài liệu",
     who_title: "Ai đã làm việc đó",
     person_name: "Oleg Bogdan (Aleh Bohdan)",
     person_citizenship: "Công dân Cộng hòa Belarus",
@@ -676,7 +744,7 @@ const translations = {
     why_p4: "Quyết định này được đưa ra hoàn toàn dựa на sự tin tưởng.",
     next_title: "Chuyện gì xảy ra tiếp theo",
     next_p1: "Sau khi mua quán, chúng tôi bắt đầu cùng nhau làm việc и quản lý quán.",
-    next_p2: "Tuy nhiên, vài tuần sau, Oleg Bogdan tuyên bố rằng:",
+    next_p2: "Tuy nhiên, vái tuần sau, Oleg Bogdan tuyên bố rằng:",
     next_point1: "— chúng tôi không có quyền gì đối with công việc kinh doanh",
     next_point2: "— chúng tôi chỉ là 'khách'",
     next_p3: "Sau đó, anh ta đã thay đổi mật khẩu truy cập и giành toàn quyền kiểm soát quán cà phê.",
