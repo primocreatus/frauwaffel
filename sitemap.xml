@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://frauwaffel.com/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://frauwaffel.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://frauwaffel.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://frauwaffel.com/vi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://frauwaffel.com/"/>
+  </url>
+  <url>
+    <loc>https://frauwaffel.com/en.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://frauwaffel.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://frauwaffel.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://frauwaffel.com/vi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://frauwaffel.com/"/>
+  </url>
+  <url>
+    <loc>https://frauwaffel.com/vi.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://frauwaffel.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://frauwaffel.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://frauwaffel.com/vi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://frauwaffel.com/"/>
+  </url>
+  <url>
+    <loc>https://frauwaffel.com/legal-update.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://frauwaffel.com/legal-update.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://frauwaffel.com/legal-update-en.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://frauwaffel.com/legal-update-vi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://frauwaffel.com/legal-update.html"/>
+  </url>
+  <url>
+    <loc>https://frauwaffel.com/legal-update-en.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://frauwaffel.com/legal-update.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://frauwaffel.com/legal-update-en.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://frauwaffel.com/legal-update-vi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://frauwaffel.com/legal-update.html"/>
+  </url>
+  <url>
+    <loc>https://frauwaffel.com/legal-update-vi.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://frauwaffel.com/legal-update.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://frauwaffel.com/legal-update-en.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://frauwaffel.com/legal-update-vi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://frauwaffel.com/legal-update.html"/>
+  </url>
+</urlset>

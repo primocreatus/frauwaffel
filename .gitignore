@@ -1,6 +1,8 @@
 deploy.sh
 deploy.bat
 remote_deploy.py
+.deploy.local.env
+.playwright-cli/
 *.log
 .env
 .DS_Store
